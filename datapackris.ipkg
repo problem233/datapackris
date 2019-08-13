@@ -1,0 +1,10 @@
+package datapackris
+
+main = Datapackris
+modules = Datapackris
+        , Datapackris.Types
+        , Datapackris.Define
+        , Datapackris.Compile
+        , Datapackris.Utils
+        , Control.Monad.RW
+        , Data.DList
