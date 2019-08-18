@@ -28,12 +28,6 @@ checkDup (MkDatapack xs) = snd $ runWriter $
                " is defined " ++ show count ++ " times"]
     else pure ()
 
-checkDup' : Datapack -> Maybe String
-checkDup' (MkDatapack xs) =
-  Prelude.Basics.snd $ runWriter {a = ()} $ do
-    tell $ Just "hello"
-    pure ()
-
 applyFor : (tyC ** Content tyC) -> (tyR ** Reference tyR) -> Bool
 applyFor (tyC ** MkContent nameC _) (tyR ** MkRef nameR) =
   tyC == tyR && nameC == nameR
